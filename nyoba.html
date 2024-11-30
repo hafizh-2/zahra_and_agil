@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zahra & Agil Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fdfdfd;
+      overflow-x: hidden;
+    }
+
+    /* Header Section */
+    header {
+      background: url('https://source.unsplash.com/1200x800/?wedding') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    header h1 {
+      position: relative;
+      font-size: 3rem;
+      font-family: 'Playfair Display', serif;
+      z-index: 1;
+    }
+
+    header p {
+      position: relative;
+      font-size: 1.5rem;
+      margin-top: 10px;
+      z-index: 1;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 500;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .couple {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ff5e57;
+    }
+
+    .date {
+      font-size: 1.2rem;
+      color: #777;
+      margin-bottom: 30px;
+    }
+
+    .details {
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    /* RSVP Button */
+    .rsvp-btn {
+      background: #ff5e57;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+
+    .rsvp-btn:hover {
+      background: #e04c47;
+    }
+
+    /* Footer Styling */
+    footer {
+      background: #343a40;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    footer a {
+      color: #ffb400;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Wedding Invitation</h1>
+    <p>Zahra & Agil</p>
+    <p>Saturday, December 20, 2024</p>
+  </header>
+
+  <!-- Wedding Details Section -->
+  <section>
+    <div class="section-title">Wedding Details</div>
+    <p class="couple">Zahra & Agil</p>
+    <p class="date">December 20, 2024</p>
+    <div class="details">
+      Join us to celebrate the special day of our lives. The wedding will take place at 
+      <b>Dream Garden Wedding Hall</b>, starting at 10:00 AM. We look forward to seeing you there!
+    </div>
+    <button class="rsvp-btn" onclick="showPopup()">RSVP Now</button>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>Made with ❤️ by <a href="https://entiva.id">Entiva</a></p>
+  </footer>
+
+  <!-- Popup Section -->
+  <div id="popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); display: flex; justify-content: center; align-items: center;">
+    <div style="background: white; padding: 20px; border-radius: 8px; text-align: center; width: 300px;">
+      <h2>RSVP Confirmation</h2>
+      <p>Thank you for confirming your attendance!</p>
+      <button style="background: #ff5e57; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;" onclick="hidePopup()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    // Show Popup
+    function showPopup() {
+      document.getElementById('popup').style.display = 'flex';
+    }
+
+    // Hide Popup
+    function hidePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
